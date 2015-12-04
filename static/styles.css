@@ -1,0 +1,41 @@
+.button {
+
+    outline: #000000 dotted;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+
+}
+
+#buttons {
+
+    height: 25vh;
+    width: 25vw;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Comic Sans MS";
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(https://33.media.tumblr.com/f9367bc7c7d2640a1a3b0420f8eb94d2/tumblr_nw5xf2o5Rp1upj7ymo1_400.gif) center no-repeat #fff;
+}
