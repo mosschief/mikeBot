@@ -47,7 +47,7 @@ def drive():
             motor.rightBackward()
         if motorSwitch['left'] == -1:
             motor.leftBackward()
-        
+
         return "Ok", 200
 
     return redirect(url_for('front'))
