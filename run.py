@@ -4,7 +4,7 @@ from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
 from OpenSSL import SSL
 import ssl
-'''import motor'''
+import motor
 
 app = Flask(__name__)
 
@@ -34,7 +34,7 @@ def drive():
         print(motorSwitch['right'])
         print(motorSwitch['left'])
 
-        '''
+
         if motorSwitch['right'] == 1:
             motor.rightForward()
         if motorSwitch['left'] == 1:
@@ -47,7 +47,7 @@ def drive():
             motor.rightBackward()
         if motorSwitch['left'] == -1:
             motor.leftBackward()
-        '''
+        
         return "Ok", 200
 
     return redirect(url_for('front'))
