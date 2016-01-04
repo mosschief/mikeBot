@@ -31,18 +31,15 @@ def drive():
         print "post"
         motorSwitch['right'] = request.form["right"]
         motorSwitch['left'] = request.form["left"]
-        print(motorSwitch['right'])
-        print(motorSwitch['left'])
-
+        print("motor switch right: " + str(motorSwitch['right']))
+        print("motor switch left: " + str(motorSwitch['left']))
 
         if motorSwitch['right'] == 1:
             print "right forward"
             motor.rightForward()
-
         if motorSwitch['left'] == 1:
             print "left forward"
             motor.leftForward()
-
         if motorSwitch['right'] == 0:
             motor.rightStop()
         if motorSwitch['left'] == 0:
