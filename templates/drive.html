@@ -61,6 +61,7 @@
                 var motorObj = {};// Object to store property + value for jQuery methods
                 var keyArr = keyAction[key];
 
+
                 if (typeof keyArr != 'undefined') {   // Test keyArr to prevent errors
                     propObj['outline-color'] = keyAction[key][io];
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
@@ -79,7 +80,7 @@
                         url: "{{ url_for('drive') }}",
                         data: motorObj
                     });
-                console.log(motorObj)
+                
                 }
 
             }

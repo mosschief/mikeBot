@@ -1,69 +1,43 @@
-import RPi.GPIO as GPIO
+import Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+import time
 
-GPIO.setmode(GPIO.BOARD)
-
-Motor1A = 16
-Motor1B = 18
-Motor1E = 22
-
-Motor2A = 23
-Motor2B = 21
-Motor2E = 19
-# Left motor setup
-GPIO.setup(Motor1A,GPIO.OUT)
-GPIO.setup(Motor1B,GPIO.OUT)
-GPIO.setup(Motor1E,GPIO.OUT)
+mh = Adafruit_MotorHAT(addr=0x60)
 
 
-# Right motor setup
-GPIO.setup(Motor2A,GPIO.OUT)
-GPIO.setup(Motor2B,GPIO.OUT)
-GPIO.setup(Motor2E,GPIO.OUT)
+# Motor 1 = Left, Motor 2 = Right
+motor1 = mh.getMotor(1)
+motor2 = mh.getMotor(2)
 
-
-
-
-
-GPIO.setup(Motor1A,GPIO.OUT)
-GPIO.setup(Motor1B,GPIO.OUT)
-GPIO.setup(Motor1E,GPIO.OUT)
-
-GPIO.setup(Motor2A,GPIO.OUT)
-GPIO.setup(Motor2B,GPIO.OUT)
-GPIO.setup(Motor2E,GPIO.OUT)
-
+# set the speed to start, from 0 (off) to 255 (max speed)
+motor1.setSpeed(150)
+motor2.setSpeed(150)
 
 def leftForward():
-    GPIO.output(Motor1A,GPIO.HIGH)
-    GPIO.output(Motor1B,GPIO.LOW)
-    GPIO.output(Motor1E,GPIO.HIGH)
+    motor1.run(Adafruit_MotorHAT.FORWARD)
 
     return
 
 def rightForward():
-    GPIO.output(Motor2A,GPIO.HIGH)
-    GPIO.output(Motor2B,GPIO.LOW)
-    GPIO.output(Motor2E,GPIO.HIGH)
+    motor2.run(Adafruit_MotorHAT.FORWARD)
+
     return
 
 def leftBackward():
-    GPIO.output(Motor1A,GPIO.LOW)
-    GPIO.output(Motor1B,GPIO.HIGH)
-    GPIO.output(Motor1E,GPIO.HIGH)
+    motor1.run(Adafruit_MotorHAT.BACKWARD)
     return
 
 def rightBackward():
-    GPIO.output(Motor2A,GPIO.LOW)
-    GPIO.output(Motor2B,GPIO.HIGH)
-    GPIO.output(Motor2E,GPIO.HIGH)
+    motor2.run(Adafruit_MotorHAT.BACKWARD)
     return
 
 def leftStop():
-    GPIO.output(Motor1E,GPIO.LOW)
+    motor1.run(Adafruit_MotorHAT.RELEASE)
+
     return
 
 
 def rightStop():
-    GPIO.output(Motor2E,GPIO.LOW)
+    motor2.run(Adafruit_MotorHAT.RELEASE)
+
     return
 

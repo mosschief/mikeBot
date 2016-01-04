@@ -2,8 +2,7 @@ __author__ = 'mossc'
 from flask import Flask, render_template, url_for, request, redirect, flash, jsonify, make_response
 from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
-from OpenSSL import SSL
-import ssl
+
 import motor
 
 app = Flask(__name__)
@@ -29,6 +28,7 @@ def front():
 def drive():
 
     if request.method == 'POST':
+        print "post"
         motorSwitch['right'] = request.form["right"]
         motorSwitch['left'] = request.form["left"]
         print(motorSwitch['right'])
@@ -57,8 +57,8 @@ def drive():
 
 if __name__ == '__main__':
 
-    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-    context.load_cert_chain('mikeBot.crt', 'mikeBot.key')
+    # context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+    # context.load_cert_chain('mikeBot.crt', 'mikeBot.key')
     app.secret_key = 'super secret key'
     # add ssl_context = context to get https on flask server
     app.debug = True
@@ -66,7 +66,8 @@ if __name__ == '__main__':
         app.run(host='0.0.0.0', port=5000)
 
     finally:
+
+        print("System shutting down")
         motor.rightStop()
         motor.leftStop()
-        print("System shutting down")
 
