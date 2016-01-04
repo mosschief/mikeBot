@@ -33,6 +33,7 @@ def drive():
         motorSwitch['left'] = request.form["left"]
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
+        print type(motorSwitch['right'])
 
         if motorSwitch['right'] == 1:
             print "right forward"
