@@ -28,18 +28,16 @@ def front():
 def drive():
 
     if request.method == 'POST':
-        print "post"
+
         motorSwitch['right'] = int(request.form["right"])
         motorSwitch['left'] = int(request.form["left"])
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
-        print type(motorSwitch['right'])
+
 
         if motorSwitch['right'] == 1:
-            print "right forward"
             motor.rightForward()
         if motorSwitch['left'] == 1:
-            print "left forward"
             motor.leftForward()
         if motorSwitch['right'] == 0:
             motor.rightStop()
@@ -54,9 +52,7 @@ def drive():
 
     return redirect(url_for('front'))
 
-
-
-
+s
 if __name__ == '__main__':
 
     # context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
