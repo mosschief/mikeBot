@@ -36,11 +36,13 @@ def drive():
 
 
         if motorSwitch['right'] == 1:
-            motor.rightForward()
             print "right forward"
+            motor.rightForward()
+
         if motorSwitch['left'] == 1:
-            motor.leftForward()
             print "left forward"
+            motor.leftForward()
+
         if motorSwitch['right'] == 0:
             motor.rightStop()
         if motorSwitch['left'] == 0:
