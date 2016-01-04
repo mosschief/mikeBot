@@ -1,0 +1,88 @@
+[Sat Dec 05 01:02:55.683103 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0] mod_wsgi (pid=6223): Target WSGI script '/var/www/mikeBot/run.wsgi' cannot be loaded as Python module.
+[Sat Dec 05 01:02:55.683387 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0] mod_wsgi (pid=6223): Exception occurred processing WSGI script '/var/www/mikeBot/run.wsgi'.
+[Sat Dec 05 01:02:55.683548 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0] Traceback (most recent call last):
+[Sat Dec 05 01:02:55.683696 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0]   File "/var/www/mikeBot/run.wsgi", line 3, in <module>
+[Sat Dec 05 01:02:55.684096 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0]     loggin.basicConfig(stream=sys.stderr)
+[Sat Dec 05 01:02:55.684237 2015] [wsgi:error] [pid 6223:tid 1965573168] [remote 192.168.1.117:0] NameError: name 'loggin' is not defined
+[Sat Dec 05 01:46:08.899718 2015] [wsgi:error] [pid 6567:tid 1965311024] ERROR:run:Exception on / [GET]
+[Sat Dec 05 01:46:08.899934 2015] [wsgi:error] [pid 6567:tid 1965311024] Traceback (most recent call last):
+[Sat Dec 05 01:46:08.899981 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+[Sat Dec 05 01:46:08.900023 2015] [wsgi:error] [pid 6567:tid 1965311024]     response = self.full_dispatch_request()
+[Sat Dec 05 01:46:08.900061 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1477, in full_dispatch_request
+[Sat Dec 05 01:46:08.900099 2015] [wsgi:error] [pid 6567:tid 1965311024]     rv = self.handle_user_exception(e)
+[Sat Dec 05 01:46:08.900135 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1381, in handle_user_exception
+[Sat Dec 05 01:46:08.900172 2015] [wsgi:error] [pid 6567:tid 1965311024]     reraise(exc_type, exc_value, tb)
+[Sat Dec 05 01:46:08.900208 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+[Sat Dec 05 01:46:08.900245 2015] [wsgi:error] [pid 6567:tid 1965311024]     rv = self.dispatch_request()
+[Sat Dec 05 01:46:08.900280 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+[Sat Dec 05 01:46:08.900318 2015] [wsgi:error] [pid 6567:tid 1965311024]     return self.view_functions[rule.endpoint](**req.view_args)
+[Sat Dec 05 01:46:08.900354 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/var/www/mikeBot/run.py", line 20, in front
+[Sat Dec 05 01:46:08.900390 2015] [wsgi:error] [pid 6567:tid 1965311024]     motorSwitch["right"] = 0
+[Sat Dec 05 01:46:08.900427 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 345, in __setitem__
+[Sat Dec 05 01:46:08.900463 2015] [wsgi:error] [pid 6567:tid 1965311024]     self._get_current_object()[key] = value
+[Sat Dec 05 01:46:08.900500 2015] [wsgi:error] [pid 6567:tid 1965311024]   File "/usr/local/lib/python2.7/dist-packages/flask/sessions.py", line 126, in _fail
+[Sat Dec 05 01:46:08.900537 2015] [wsgi:error] [pid 6567:tid 1965311024]     raise RuntimeError('the session is unavailable because no secret '
+[Sat Dec 05 01:46:08.900582 2015] [wsgi:error] [pid 6567:tid 1965311024] RuntimeError: the session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+[Sat Dec 05 01:46:10.476103 2015] [wsgi:error] [pid 6567:tid 1940145200] ERROR:run:Exception on / [GET]
+[Sat Dec 05 01:46:10.476292 2015] [wsgi:error] [pid 6567:tid 1940145200] Traceback (most recent call last):
+[Sat Dec 05 01:46:10.476338 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+[Sat Dec 05 01:46:10.476379 2015] [wsgi:error] [pid 6567:tid 1940145200]     response = self.full_dispatch_request()
+[Sat Dec 05 01:46:10.476473 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1477, in full_dispatch_request
+[Sat Dec 05 01:46:10.476514 2015] [wsgi:error] [pid 6567:tid 1940145200]     rv = self.handle_user_exception(e)
+[Sat Dec 05 01:46:10.476547 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1381, in handle_user_exception
+[Sat Dec 05 01:46:10.476579 2015] [wsgi:error] [pid 6567:tid 1940145200]     reraise(exc_type, exc_value, tb)
+[Sat Dec 05 01:46:10.476611 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+[Sat Dec 05 01:46:10.476644 2015] [wsgi:error] [pid 6567:tid 1940145200]     rv = self.dispatch_request()
+[Sat Dec 05 01:46:10.476675 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+[Sat Dec 05 01:46:10.476708 2015] [wsgi:error] [pid 6567:tid 1940145200]     return self.view_functions[rule.endpoint](**req.view_args)
+[Sat Dec 05 01:46:10.476740 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/var/www/mikeBot/run.py", line 20, in front
+[Sat Dec 05 01:46:10.476771 2015] [wsgi:error] [pid 6567:tid 1940145200]     motorSwitch["right"] = 0
+[Sat Dec 05 01:46:10.476801 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 345, in __setitem__
+[Sat Dec 05 01:46:10.476833 2015] [wsgi:error] [pid 6567:tid 1940145200]     self._get_current_object()[key] = value
+[Sat Dec 05 01:46:10.476865 2015] [wsgi:error] [pid 6567:tid 1940145200]   File "/usr/local/lib/python2.7/dist-packages/flask/sessions.py", line 126, in _fail
+[Sat Dec 05 01:46:10.476897 2015] [wsgi:error] [pid 6567:tid 1940145200]     raise RuntimeError('the session is unavailable because no secret '
+[Sat Dec 05 01:46:10.476931 2015] [wsgi:error] [pid 6567:tid 1940145200] RuntimeError: the session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+[Sat Dec 05 01:48:01.869527 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:01.869862 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:02.164298 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:02.164624 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:02.450761 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:02.451023 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:02.732487 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:02.732865 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:02.949451 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:02.949823 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:03.234984 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:03.240837 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:03.490477 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:03.490744 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:03.891195 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:03.891458 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:04.286652 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:04.286931 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:04.471953 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:04.472226 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:04.611373 2015] [wsgi:error] [pid 6714:tid 1932039216] -1
+[Sat Dec 05 01:48:04.611637 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:04.894075 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:04.894339 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:05.006509 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:05.006811 2015] [wsgi:error] [pid 6714:tid 1932039216] 1
+[Sat Dec 05 01:48:05.461608 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:48:05.462008 2015] [wsgi:error] [pid 6714:tid 1965593648] 0
+[Sat Dec 05 01:59:00.817280 2015] [wsgi:error] [pid 7516:tid 1965773872] 1
+[Sat Dec 05 01:59:00.817617 2015] [wsgi:error] [pid 7516:tid 1965773872] 1
+[Sat Dec 05 01:59:01.005145 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.005524 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.196819 2015] [wsgi:error] [pid 7516:tid 1965773872] -1
+[Sat Dec 05 01:59:01.197090 2015] [wsgi:error] [pid 7516:tid 1965773872] 1
+[Sat Dec 05 01:59:01.356448 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.356714 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.597777 2015] [wsgi:error] [pid 7516:tid 1965773872] 1
+[Sat Dec 05 01:59:01.598072 2015] [wsgi:error] [pid 7516:tid 1965773872] -1
+[Sat Dec 05 01:59:01.746600 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.746869 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:01.993677 2015] [wsgi:error] [pid 7516:tid 1965773872] -1
+[Sat Dec 05 01:59:01.993939 2015] [wsgi:error] [pid 7516:tid 1965773872] -1
+[Sat Dec 05 01:59:02.137440 2015] [wsgi:error] [pid 7516:tid 1932219440] 0
+[Sat Dec 05 01:59:02.137730 2015] [wsgi:error] [pid 7516:tid 1932219440] 0

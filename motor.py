@@ -1,4 +1,4 @@
-import Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
+from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
 import time
 
 mh = Adafruit_MotorHAT(addr=0x60)
