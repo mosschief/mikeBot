@@ -29,8 +29,8 @@ def drive():
 
     if request.method == 'POST':
         print "post"
-        motorSwitch['right'] = request.form["right"]
-        motorSwitch['left'] = request.form["left"]
+        motorSwitch['right'] = int(request.form["right"])
+        motorSwitch['left'] = int(request.form["left"])
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
         print type(motorSwitch['right'])
