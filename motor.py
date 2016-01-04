@@ -13,12 +13,14 @@ motor1.setSpeed(150)
 motor2.setSpeed(150)
 
 def leftForward():
-    motor1.run(Adafruit_MotorHAT.FORWARD)
+    while True:
+        motor1.run(Adafruit_MotorHAT.FORWARD)
 
     return
 
 def rightForward():
-    motor2.run(Adafruit_MotorHAT.FORWARD)
+    while True:
+        motor2.run(Adafruit_MotorHAT.FORWARD)
 
     return
 
