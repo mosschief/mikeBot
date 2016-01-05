@@ -30,7 +30,17 @@
     <div class="button" id="down">
         S
     </div>
+    <div class="button" id="speedDown">
+        Q
+    </div>
+    <div class="button" id="speedUp">
+        E
+    </div>
 </div>
+
+<!--<div id="stream">-->
+    <!--<img src=”/?action=stream”/>-->
+<!--</div>-->
 
 
 <script type="text/javascript">
@@ -43,12 +53,15 @@
 	});
 
     $(document).ready(function () {
-        var keyAction = {                    // Object to store our stuff
+        var keyAction = {
             //  keyCode : [(1)KEYDOWN, (2)KEYUP]
             65: ['#left', 'red', 'black', [1, -1], [0, 0]],            // A key (Left)
-            68: ['#right', 'red', 'black', [-1, 1], [0, 0]],            // D key  (Right
+            68: ['#right', 'red', 'black', [-1, 1], [0, 0]],            // D key  (Right)
             87: ['#up', 'red', 'black', [1, 1], [0, 0]],            // W key
-            83: ['#down', 'red', 'black', [-1, -1], [0, 0]]             // S key
+            83: ['#down', 'red', 'black', [-1, -1], [0, 0]],   // S key
+            69: ['#speedUp','red', 'black','up' ], // E key
+            81: ['#speedDown','red', 'black','down'] // Q key
+
         };
 
         $('body').on('keydown keyup', function( e ) {
@@ -65,7 +78,8 @@
                 if (typeof keyArr != 'undefined') {   // Test keyArr to prevent errors
                     propObj['outline-color'] = keyAction[key][io];
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
-                    motorObj["right"] = keyAction[key][io+2][1] // Added data to object for right motor movement
+                    motorObj["right"] = keyAction[key][io+2][1]
+                    motorObj["speed"] = keyAction[key][io+2]// Added data to object for right motor movement
                     if(io == 1){
                         isOn = 1; // Change variable to indicate key is being pressed
                         keyCheck = key; // Variable stores which key is pressed
@@ -80,7 +94,6 @@
                         url: "{{ url_for('drive') }}",
                         data: motorObj
                     });
-                
                 }
 
             }

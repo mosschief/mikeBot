@@ -19,13 +19,12 @@
     font-family: "Comic Sans MS";
 }
 
-#left {
+#left, #speedDown {
     float: left;
 }
 
-#right {
+#right, #speedUp {
     float: right;
-
 }
 
 .no-js #loader { display: none;  }

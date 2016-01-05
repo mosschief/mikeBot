@@ -4,6 +4,7 @@ from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
 
 import motor
+import subprocess
 
 app = Flask(__name__)
 
@@ -13,16 +14,17 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 
 basic_auth = BasicAuth(app)
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST','OPTIONS'])
+@crossdomain(origin='*')
 @basic_auth.required
 def front():
 
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
-
-
+    # subprocess.call(['mkdir', '/tmp/stream'])
+    # subprocess.call(['rapistill', '--nopreview', '-w', '640', '480', '-q', '5', '-o', '/tmp/stream/pic.jpg', '-tl', '100', '-t', '9999999', '-th', '0:0:0', '&'])
+    # subprocess.call(['LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer', '-i', '"input_file.so -f /tmp/stream -n pic.jpg"', '-0', '"output_http.so -w /usr/local/www"'])
     return render_template("drive.html")
-
 
 @app.route('/drive/', methods=['POST', 'GET'])
 def drive():
@@ -31,6 +33,7 @@ def drive():
 
         motorSwitch['right'] = int(request.form["right"])
         motorSwitch['left'] = int(request.form["left"])
+        motorSwitch['speed'] = int(request.form["speed"])
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
 
@@ -47,6 +50,10 @@ def drive():
             motor.rightBackward()
         if motorSwitch['left'] == -1:
             motor.leftBackward()
+        if motorSwitch['speed'] == 'up':
+            motor.speedUp()
+        if motorSwitch['speed'] == 'down':
+            motor.speedDown()
 
         return "Ok", 200
 
