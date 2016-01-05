@@ -15,7 +15,7 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 basic_auth = BasicAuth(app)
 
 @app.route('/', methods=['GET','POST','OPTIONS'])
-@crossdomain(origin='*')
+# @crossdomain(origin='*')
 @basic_auth.required
 def front():
 
@@ -59,7 +59,6 @@ def drive():
 
     return redirect(url_for('front'))
 
-s
 if __name__ == '__main__':
 
     # context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
