@@ -8,18 +8,16 @@ motor1 = mh.getMotor(1)
 motor2 = mh.getMotor(2)
 
 # set the speed to start, from 0 (off) to 255 (max speed)
-motorSpeed = 150
 
-motor1.setSpeed(motorSpeed)
-motor2.setSpeed(motorSpeed)
+
+motor1.setSpeed(150)
+motor2.setSpeed(150)
 
 def leftForward():
-
     motor1.run(Adafruit_MotorHAT.FORWARD)
     return
 
 def rightForward():
-
     motor2.run(Adafruit_MotorHAT.FORWARD)
     return
 
@@ -40,18 +38,20 @@ def rightStop():
     motor2.run(Adafruit_MotorHAT.RELEASE)
     return
 
-def speedUp():
-    if motorSpeed <= 200:
-        motorSpeed += 50
-        motor1.setSpeed(motorSpeed)
-        return
+def speedUp(speed):
+
+
+    if speed <= 240:
+        speed += 10
+        motor1.setSpeed(speed)
+        return speed
     else:
         return "Top Speed"
 
-def speedDown():
-    if motorSpeed >= 100:
-        motorSpeed -= 50
-        motor1.setSpeed(motorSpeed)
-        return
+def speedDown(speed):
+    if speed >= 60:
+        speed -= 10
+        motor1.setSpeed(speed)
+        return speed
     else:
         return "Minimum Speed"

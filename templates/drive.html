@@ -13,6 +13,12 @@
 <div class="se-pre-con">Loading</div>
 
 <div id="buttons">
+    <div class="button" id="speedDown">
+        Q
+    </div>
+    <div class="button" id="speedUp">
+        E
+    </div>
     <div class="button" id="up">
         W
     </div>
@@ -30,12 +36,7 @@
     <div class="button" id="down">
         S
     </div>
-    <div class="button" id="speedDown">
-        Q
-    </div>
-    <div class="button" id="speedUp">
-        E
-    </div>
+
 </div>
 
 <!--<div id="stream">-->
@@ -59,27 +60,41 @@
             68: ['#right', 'red', 'black', [-1, 1], [0, 0]],            // D key  (Right)
             87: ['#up', 'red', 'black', [1, 1], [0, 0]],            // W key
             83: ['#down', 'red', 'black', [-1, -1], [0, 0]],   // S key
-            69: ['#speedUp','red', 'black','up' ], // E key
+            69: ['#speedUp','red', 'black','up'  ], // E key
             81: ['#speedDown','red', 'black','down'] // Q key
 
         };
 
         $('body').on('keydown keyup', function( e ) {
+
             var key = e.which;
             var io = e.type == "keydown" ? 1 : 2; // "1"if keydown; "2" if keyup
+            var keyArr = keyAction[key];
 
-            if((io == 2 && keyCheck == key) || !isOn){ //prevents two keys from being pressed, does not allow keyup to execute if it is not the same key as the last keydown
+            if (typeof keyArr != 'undefined') { // Test keyArr to prevent errors
+
 
                 var propObj = {};
-                var motorObj = {};// Object to store property + value for jQuery methods
-                var keyArr = keyAction[key];
+                var motorObj = {};
+                propObj['outline-color'] = keyAction[key][io];// Object to store property + value for jQuery methods
+                if(key === 69 || key === 81){
+                    motorObj["speed"] = keyAction[key][io+2]
+                    console.log(motorObj)
+                    $(keyAction[key][0]).css(propObj);
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ url_for('drive') }}",
+                        data: motorObj
+                    });
+                }
+
+                else if((io == 2 && keyCheck == key) || !isOn){  //prevents two keys from being pressed, does not allow keyup to execute if it is not the same key as the last keydown
 
 
-                if (typeof keyArr != 'undefined') {   // Test keyArr to prevent errors
-                    propObj['outline-color'] = keyAction[key][io];
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
                     motorObj["right"] = keyAction[key][io+2][1]
-                    motorObj["speed"] = keyAction[key][io+2]// Added data to object for right motor movement
+                    console.log(motorObj)
+                    // Added data to object for right motor movement
                     if(io == 1){
                         isOn = 1; // Change variable to indicate key is being pressed
                         keyCheck = key; // Variable stores which key is pressed
