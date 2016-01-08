@@ -32,7 +32,7 @@ def front():
 def drive():
 
     if request.method == 'POST':
-
+        global speedCurrent
         motorSwitch['right'] = int(request.form["right"])
         motorSwitch['left'] = int(request.form["left"])
         motorSwitch['speed'] = int(request.form["speed"])
@@ -53,11 +53,12 @@ def drive():
         if motorSwitch['left'] == -1:
             motor.leftBackward()
         if motorSwitch['speed'] == 'up':
+
             tmpMessage = motor.speedUp(speedCurrent)
-              if type(tmpMessage) == 'int':
-                  speedCurrent = tmpMessage
-              else:
-                  print tmpMessage
+            if type(tmpMessage) == 'int':
+                speedCurrent = tmpMessage
+            else:
+                print tmpMessage
         if motorSwitch['speed'] == 'down':
             tmpMessage = speedCurrent = motor.speedDown(speedCurrent)
             if type(tmpMessage) == 'int':
