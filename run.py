@@ -15,8 +15,7 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 basic_auth = BasicAuth(app)
 
 @app.route('/', methods=['GET','POST','OPTIONS'])
-# @crossdomain(origin='*')        # motor.rightStop()
-        # motor.leftStop()
+# @crossdomain(origin='*')
 @basic_auth.required
 def front():
 
