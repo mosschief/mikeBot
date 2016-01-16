@@ -32,8 +32,8 @@
       <file leaf-file-name="drive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/drive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-36.666668">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.0">
+              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -42,10 +42,10 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3898858">
-              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.18433931">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding>
-                <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+                <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/motor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding>
                 <element signature="e#0#88#0" expanded="true" />
               </folding>
@@ -92,8 +92,8 @@
       <list>
         <option value="$USER_HOME$/fullstack/vagrant/menuProject/project.py" />
         <option value="$PROJECT_DIR$/static/styles.css" />
-        <option value="$PROJECT_DIR$/motor.py" />
         <option value="$PROJECT_DIR$/templates/drive.html" />
+        <option value="$PROJECT_DIR$/motor.py" />
         <option value="$PROJECT_DIR$/run.py" />
       </list>
     </option>
@@ -598,7 +598,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452903638083</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="comment out possibly offending code">
+      <created>1452905802939</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1452905802939</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -645,7 +651,8 @@
     <MESSAGE value="Uncommented code" />
     <MESSAGE value="Fixed typos" />
     <MESSAGE value="add look up" />
-    <option name="LAST_COMMIT_MESSAGE" value="add look up" />
+    <MESSAGE value="comment out possibly offending code" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment out possibly offending code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -770,7 +777,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -806,7 +813,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -842,7 +849,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -878,7 +885,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -914,7 +921,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -950,7 +957,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -976,7 +983,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1002,7 +1009,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1020,7 +1027,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1030,7 +1037,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1054,7 +1061,7 @@
     <entry file="file://$PROJECT_DIR$/motor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding>
             <element signature="e#0#88#0" expanded="true" />
           </folding>
@@ -1063,18 +1070,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/drive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.666668">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.0">
+          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3898858">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.18433931">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding>
-            <marker date="1452905787891" expanded="true" signature="2829:2879" placeholder="..." />
+            <marker date="1452906276175" expanded="true" signature="2831:2881" placeholder="..." />
           </folding>
         </state>
       </provider>
