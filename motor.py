@@ -41,26 +41,26 @@ def rightStop():
     motor2.run(Adafruit_MotorHAT.RELEASE)
     return
 
-def speedUp(speed):
-
-
-    if speed <= 240:
-        speed += 10
-        motor1.setSpeed(speed)
-        return speed
-    else:
-        return "Top Speed"
-
-def speedDown(speed):
-    if speed >= 60:
-        speed -= 10
-        motor1.setSpeed(speed)
-        return speed
-    else:
-        return "Minimum Speed"
-
-def lookUp():
-    motor3.step(2, Adafruit_MotorHAT.FORWARD, Adafruit_MotorHAT.SINGLE)
-
-def lookDown():
-    motor3.step(2, Adafruit_MotorHAT.BACKWARD, Adafruit_MotorHAT.SINGLE)
+# def speedUp(speed):
+#
+#
+#     if speed <= 240:
+#         speed += 10
+#         motor1.setSpeed(speed)
+#         return speed
+#     else:
+#         return "Top Speed"
+#
+# def speedDown(speed):
+#     if speed >= 60:
+#         speed -= 10
+#         motor1.setSpeed(speed)
+#         return speed
+#     else:
+#         return "Minimum Speed"
+#
+# def lookUp():
+#     motor3.step(2, Adafruit_MotorHAT.FORWARD, Adafruit_MotorHAT.SINGLE)
+#
+# def lookDown():
+#     motor3.step(2, Adafruit_MotorHAT.BACKWARD, Adafruit_MotorHAT.SINGLE)

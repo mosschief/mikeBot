@@ -51,19 +51,19 @@ def drive():
             motor.rightBackward()
         if motorSwitch['left'] == -1:
             motor.leftBackward()
-        if motorSwitch['speed'] == 'up':
-
-            tmpMessage = motor.speedUp(speedCurrent)
-            if type(tmpMessage) == 'int':
-                speedCurrent = tmpMessage
-            else:
-                print tmpMessage
-        if motorSwitch['speed'] == 'down':
-            tmpMessage = speedCurrent = motor.speedDown(speedCurrent)
-            if type(tmpMessage) == 'int':
-              speedCurrent = tmpMessage
-            else:
-              print tmpMessage
+        # if motorSwitch['speed'] == 'up':
+        #
+        #     tmpMessage = motor.speedUp(speedCurrent)
+        #     if type(tmpMessage) == 'int':
+        #         speedCurrent = tmpMessage
+        #     else:
+        #         print tmpMessage
+        # if motorSwitch['speed'] == 'down':
+        #     tmpMessage = speedCurrent = motor.speedDown(speedCurrent)
+        #     if type(tmpMessage) == 'int':
+        #       speedCurrent = tmpMessage
+        #     else:
+        #       print tmpMessage
 
         return "Ok", 200
 
