@@ -32,9 +32,10 @@ def drive():
 
     if request.method == 'POST':
         global speedCurrent
+
         motorSwitch['right'] = int(request.form["right"])
         motorSwitch['left'] = int(request.form["left"])
-        # motorSwitch['speed'] = int(request.form["speed"])
+        motorSwitch['speed'] = int(request.form["speed"])
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
 

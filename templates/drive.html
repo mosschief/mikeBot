@@ -75,7 +75,7 @@
 
 
                 var propObj = {};
-                var motorObj = {};
+                var motorObj = {"speed":null, 'left':null, 'right':null};
                 propObj['outline-color'] = keyAction[key][io];// Object to store property + value for jQuery methods
                 if(key === 69 || key === 81){
                     motorObj["speed"] = keyAction[key][io+2];
@@ -94,6 +94,7 @@
 
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
                     motorObj["right"] = keyAction[key][io+2][1]
+
                     console.log(motorObj);
                     console.log("drive");
                     // Added data to object for right motor movement
