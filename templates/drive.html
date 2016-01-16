@@ -60,8 +60,8 @@
             68: ['#right', 'red', 'black', [-1, 1], [0, 0]],            // D key  (Right)
             87: ['#up', 'red', 'black', [1, 1], [0, 0]],            // W key
             83: ['#down', 'red', 'black', [-1, -1], [0, 0]],   // S key
-            69: ['#speedUp','red', 'black','up'  ], // E key
-            81: ['#speedDown','red', 'black','down'] // Q key
+            69: ['#speedUp','red', 'black','up', null  ], // E key
+            81: ['#speedDown','red', 'black','down', null] // Q key
 
         };
 
@@ -78,8 +78,9 @@
                 var motorObj = {};
                 propObj['outline-color'] = keyAction[key][io];// Object to store property + value for jQuery methods
                 if(key === 69 || key === 81){
-                    motorObj["speed"] = keyAction[key][io+2]
-                    console.log(motorObj)
+                    motorObj["speed"] = keyAction[key][io+2];
+                    console.log(motorObj);
+                    console.log("look up");
                     $(keyAction[key][0]).css(propObj);
                     $.ajax({
                         type: "POST",
@@ -93,7 +94,8 @@
 
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
                     motorObj["right"] = keyAction[key][io+2][1]
-                    console.log(motorObj)
+                    console.log(motorObj);
+                    console.log("drive");
                     // Added data to object for right motor movement
                     if(io == 1){
                         isOn = 1; // Change variable to indicate key is being pressed
