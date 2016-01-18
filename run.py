@@ -2,12 +2,15 @@ __author__ = 'mossc'
 from flask import Flask, render_template, url_for, request, redirect, flash, jsonify, make_response
 from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
+from flask.ext.cors import CORS
 
 import motor
 import os
 from thread import start_new_thread
 
 app = Flask(__name__)
+CORS(app)
+
 
 APPLICATION_NAME = "mikeBot"
 app.config['BASIC_AUTH_USERNAME'] = 'test'
@@ -24,7 +27,7 @@ def startStream():
     os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
 
 @app.route('/', methods=['GET','POST','OPTIONS'])
-# @crossdomain(origin='*')
+@crossdomain(origin='*')
 @basic_auth.required
 def front():
 
