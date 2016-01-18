@@ -36,11 +36,10 @@ def front():
     return render_template("drive.html")
 
 @app.route('/drive/', methods=['POST', 'GET'])
-@crossdomain(origin='*')
 def drive():
 
     if request.method == 'POST':
-        global speedCurrent192.168.1.139:8080/?action=snapshot
+        global speedCurrent
         if request.form["right"] and request.form["left"]:
             motorSwitch['right'] = int(request.form["right"])
             motorSwitch['left'] = int(request.form["left"])
