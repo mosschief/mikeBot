@@ -41,11 +41,11 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67317075">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.32038835">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#21#120#0" expanded="true" />
-                <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+                <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -104,7 +104,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
+    <option name="x" value="943" />
     <option name="y" value="30" />
     <option name="width" value="936" />
     <option name="height" value="1050" />
@@ -528,11 +528,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453148005625</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="switch to os.system">
+      <created>1453148161377</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1453148161377</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="30" width="936" height="1050" extended-state="4" />
+    <frame x="943" y="30" width="936" height="1050" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -544,7 +550,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3277487" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32460734" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -579,7 +585,8 @@
     <MESSAGE value="uncomment out offending code" />
     <MESSAGE value="Add streaming video start&#10;" />
     <MESSAGE value="add tmp directory creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tmp directory creation" />
+    <MESSAGE value="switch to os.system" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch to os.system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,7 +616,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -742,7 +749,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -779,7 +786,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -816,7 +823,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -853,7 +860,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -890,7 +897,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -927,7 +934,7 @@
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -954,7 +961,7 @@
           <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -981,7 +988,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1000,7 +1007,7 @@
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1011,7 +1018,7 @@
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1052,11 +1059,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67317075">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.32038835">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="e#21#120#0" expanded="true" />
-            <marker date="1453148151782" expanded="true" signature="3160:3210" placeholder="..." />
+            <marker date="1453148233118" expanded="true" signature="3160:3210" placeholder="..." />
           </folding>
         </state>
       </provider>
