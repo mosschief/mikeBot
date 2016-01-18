@@ -22,9 +22,8 @@ def front():
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
 
-    # subprocess.call(['mkdir', '/tmp/stream'])
-    # subprocess.call(['rapistill', '--nopreview', '-w', '640', '480', '-q', '5', '-o', '/tmp/stream/pic.jpg', '-tl', '100', '-t', '9999999', '-th', '0:0:0', '&'])
-    # subprocess.call(['LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer', '-i', '"input_file.so -f /tmp/stream -n pic.jpg"', '-0', '"output_http.so -w /usr/local/www"'])
+    subprocess.call(['rapistill', '--nopreview', '-w', '640', '480', '-q', '5', '-o', '/tmp/stream/pic.jpg', '-tl', '100', '-t', '9999999', '-th', '0:0:0', '&'])
+    subprocess.call(['LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer', '-i', '"input_file.so -f /tmp/stream -n pic.jpg"', '-0', '"output_http.so -w /usr/local/www"'])
     return render_template("drive.html")
 
 @app.route('/drive/', methods=['POST', 'GET'])
