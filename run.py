@@ -4,8 +4,8 @@ from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
 
 import motor
-import subprocess
 import os
+from thread import start_new_thread
 
 app = Flask(__name__)
 
@@ -15,6 +15,14 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 
 basic_auth = BasicAuth(app)
 
+def startCamera():
+    os.system("mkdir /tmp/stream")
+    os.system("raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
+
+
+def startStream():
+    os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
+
 @app.route('/', methods=['GET','POST','OPTIONS'])
 # @crossdomain(origin='*')
 @basic_auth.required
@@ -22,12 +30,9 @@ def front():
 
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
-    os.system("mkdir /tmp/stream")
-    os.system("raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
-    os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
-    # subprocess.call(['mkdir', '/tmp/stream'])
-    # subprocess.call(['rapistill', '--nopreview', '-w', '640', '480', '-q', '5', '-o', '/tmp/stream/pic.jpg', '-tl', '100', '-t', '9999999', '-th', '0:0:0', '&'])
-    # subprocess.call(['LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer', '-i', '"input_file.so -f /tmp/stream -n pic.jpg"', '-0', '"output_http.so -w /usr/local/www"'])
+    start_new_thread(startCamera())
+    start_new_thread(startStream())
+
     return render_template("drive.html")
 
 @app.route('/drive/', methods=['POST', 'GET'])
