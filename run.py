@@ -68,6 +68,7 @@ def startStream():
     os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
 
 @app.route('/', methods=['GET','POST'])
+@basic_auth.required
 @crossdomain(origin='*')
 def front():
 
@@ -133,7 +134,7 @@ if __name__ == '__main__':
     try:
         start_new_thread(startCamera,())
         start_new_thread(startStream,())
-        app.run(host='0.0.0.0', port=5000)
+        app.run(host='0.0.0.0', port=5000, threaded=True)
 
     finally:
 
