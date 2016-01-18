@@ -67,9 +67,9 @@ def startCamera():
 def startStream():
     os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
 
-@app.route('/', methods=['GET','POST', n'OPTIONS'])
-@crossdomain(origin='*')
+@app.route('/', methods=['GET','POST', 'OPTIONS'])
 @basic_auth.required
+@crossdomain(origin='*')
 def front():
 
     motorSwitch["right"] = 0
