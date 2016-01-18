@@ -67,7 +67,7 @@ def startCamera():
 def startStream():
     os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
 
-@app.route('/', methods=['GET','POST','OPTIONS'])
+@app.route('/', methods=['GET','POST', n'OPTIONS'])
 @crossdomain(origin='*')
 @basic_auth.required
 def front():
@@ -78,7 +78,8 @@ def front():
 
     return render_template("drive.html")
 
-@app.route('/drive/', methods=['POST', 'GET'])
+@app.route('/drive/', methods=['POST', 'GET', 'OPTIONS'])
+@crossdomain(origin='*')
 def drive():
 
     if request.method == 'POST':
