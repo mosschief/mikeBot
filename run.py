@@ -20,11 +20,11 @@ basic_auth = BasicAuth(app)
 
 def startCamera():
     os.system("mkdir /tmp/stream")
-    os.system("raspistill --nopreview -w 640 -h 480 -q 5 -f 20 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
+    os.system("raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
 
 
 def startStream():
-    os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
+    os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i -f 20 "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"')
 
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
