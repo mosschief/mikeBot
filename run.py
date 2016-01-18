@@ -30,8 +30,7 @@ def front():
 
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
-    start_new_thread(startCamera())
-    start_new_thread(startStream())
+
 
     return render_template("drive.html")
 
@@ -88,8 +87,9 @@ if __name__ == '__main__':
     # add ssl_context = context to get https on flask server
     app.debug = True
     try:
-
-        app.run(host='0.0.0.0', port=5000)
+        start_new_thread(startCamera())
+        start_new_thread(startStream())
+        start_new_thread(app.run(host='0.0.0.0', port=5000))
 
     finally:
 
