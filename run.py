@@ -8,9 +8,10 @@ from functools import update_wrapper
 import motor
 import os
 from thread import start_new_thread
+from flask.ext.cors import CORS
 
 app = Flask(__name__)
-
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 APPLICATION_NAME = "mikeBot"
 app.config['BASIC_AUTH_USERNAME'] = 'test'
 app.config['BASIC_AUTH_PASSWORD'] = 'test'
