@@ -26,8 +26,8 @@ basic_auth = BasicAuth(app)
 
 def startStream():
     os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental/')
-    os.system('export LD_LIBRARY_PATH=.')
-    os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so"')
+    p = subprocess.Popen(['export', 'LD_LIBRARY_PATH=.'], cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental/')
+    p1 = subprocess.Popen(['./mjpg_streamer', '-o "output_http.so -w ./www"','-i "input_raspicam.so"'], cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental/')
 
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
