@@ -18,13 +18,13 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 
 basic_auth = BasicAuth(app)
 
-def startCamera():
-    os.system("mkdir /tmp/stream")
-    os.system("raspistill --nopreview -vf -hf -bm -w 640 -h 480 -q 8 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
-
+# def startCamera():
+#     os.system("mkdir /tmp/stream")
+#     os.system("raspistill --nopreview -vf -hf -bm -w 640 -h 480 -q 8 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
+#
 
 def startStream():
-    os.system('LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www" ')
+    os.system('LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -i "input_raspicam.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www" -fps 15')
 
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
@@ -89,7 +89,7 @@ if __name__ == '__main__':
     # add ssl_context = context to get https on flask server
     app.debug = False
     try:
-        start_new_thread(startCamera,())
+        # start_new_thread(startCamera,())
         start_new_thread(startStream,())
         app.run(host='0.0.0.0', port=5000, threaded=True)
 
