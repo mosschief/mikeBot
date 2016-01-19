@@ -1,12 +1,15 @@
 .button {
 
-    outline: #000000 dotted;
+    outline: #000000 dashed;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: 25px;
     height: 25px;
 
+}
+#h1 {
+    font-family: "Comic Sans MS";
 }
 
 #buttons {
