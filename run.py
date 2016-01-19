@@ -22,11 +22,6 @@ def startStream():
 
     subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
 
-
-    # os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    # os.system('export LD_LIBRARY_PATH=.')
-    # os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"')
-
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
