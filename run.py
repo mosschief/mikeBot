@@ -32,6 +32,8 @@ def front():
     myIP = requests.get('https://api.ipify.org').text
     myIP += ':8080/?action=stream'
 
+    myIP = 'http://' + myIP
+
 
     return render_template("drive.html", streamAddress=myIP)
 
