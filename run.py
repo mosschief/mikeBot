@@ -20,9 +20,9 @@ basic_auth = BasicAuth(app)
 
 def startStream():
 
-    subprocess.call('export LD_LIBRARY_PATH=.', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    subprocess.call('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    #
+    subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
+
+
     # os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental')
     # os.system('export LD_LIBRARY_PATH=.')
     # os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"')
