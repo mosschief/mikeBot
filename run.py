@@ -24,7 +24,7 @@ basic_auth = BasicAuth(app)
 #
 
 def startStream():
-    os.system('LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -i "input_raspicam.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www" -fps 15')
+    os.system('LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -i "input_raspicam.so" -o "output_http.so -w /usr/local/www" -fps 15')
 
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
