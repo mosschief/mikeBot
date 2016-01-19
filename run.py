@@ -12,7 +12,7 @@ import subprocess
 import requests
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app)
 APPLICATION_NAME = "mikeBot"
 app.config['BASIC_AUTH_USERNAME'] = 'test'
 app.config['BASIC_AUTH_PASSWORD'] = 'test'
