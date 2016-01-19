@@ -9,7 +9,6 @@ import motor
 import os
 from thread import start_new_thread
 from flask.ext.cors import CORS
-import subprocess
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -25,11 +24,8 @@ basic_auth = BasicAuth(app)
 #
 
 def startStream():
-    p = subprocess.Popen(['export', 'LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental'], cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    print p
-    p1 = subprocess.Popen(['./mjpg_streamer', '-o "output_http.so -w ./www"','-i "input_raspicam.so"'], cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    print p1
-
+    os.system('export LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental/')
+    os.system('/var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg-streamer ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so" -fps 15 -vf -hf')
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
