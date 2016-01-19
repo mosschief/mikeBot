@@ -9,6 +9,7 @@ import os
 from thread import start_new_thread
 from flask.ext.cors import CORS
 import subprocess
+import requests
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -28,9 +29,11 @@ def front():
 
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
+    myIP = requests.get('https://api.ipify.org').text
+    myIP += ':8080/?action=stream'
 
 
-    return render_template("drive.html")
+    return render_template("drive.html", streamAddress=myIP)
 
 @app.route('/drive/', methods=['POST', 'GET'])
 def drive():

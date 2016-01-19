@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0aeb662b-abaa-47f6-addf-f731ede9504f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/drive.html" afterPath="$PROJECT_DIR$/templates/drive.html" />
     </list>
     <ignored path="mikeBot.iws" />
@@ -28,24 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="drive.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="drive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/drive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2408435">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state vertical-scroll-proportion="-20.0">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.42672414">
+              <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
               <folding>
                 <element signature="e#21#130#0" expanded="true" />
-                <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+                <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -90,9 +91,9 @@
       <list>
         <option value="$USER_HOME$/fullstack/vagrant/menuProject/project.py" />
         <option value="$PROJECT_DIR$/motor.py" />
-        <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/static/styles.css" />
         <option value="$PROJECT_DIR$/templates/drive.html" />
+        <option value="$PROJECT_DIR$/run.py" />
       </list>
     </option>
   </component>
@@ -102,8 +103,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
     <option name="y" value="30" />
-    <option name="width" value="952" />
+    <option name="width" value="960" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -409,12 +411,6 @@
       <option name="number" value="Default" />
       <updated>1448672712415</updated>
     </task>
-    <task id="LOCAL-00079" summary="change to experiemental&#10;">
-      <created>1453170244811</created>
-      <option name="number" value="00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1453170244811</updated>
-    </task>
     <task id="LOCAL-00080" summary="change to experiemental&#10;">
       <created>1453170474982</created>
       <option name="number" value="00080" />
@@ -703,11 +699,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453238721883</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="make publically available">
+      <created>1453242692393</created>
+      <option name="number" value="00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1453242692393</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="952" height="1050" extended-state="4" />
+    <frame x="960" y="30" width="960" height="1050" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -782,14 +784,15 @@
     <MESSAGE value="adjusting video quality&#10;" />
     <MESSAGE value="change to experiemental&#10;" />
     <MESSAGE value="change css" />
-    <option name="LAST_COMMIT_MESSAGE" value="change css" />
+    <MESSAGE value="make publically available" />
+    <option name="LAST_COMMIT_MESSAGE" value="make publically available" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/run.py</url>
-          <line>94</line>
+          <line>97</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -812,7 +815,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -935,7 +938,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -970,7 +973,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1005,7 +1008,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1040,7 +1043,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1075,7 +1078,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1110,7 +1113,7 @@
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1137,7 +1140,7 @@
           <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1164,7 +1167,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1183,7 +1186,7 @@
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1194,7 +1197,7 @@
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1215,6 +1218,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/drive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/motor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1225,20 +1236,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.42672414">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
-            <marker date="1453237148097" expanded="true" signature="2968:3018" placeholder="..." />
+            <marker date="1453243199557" expanded="true" signature="3093:3143" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/drive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2408435">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
