@@ -18,14 +18,11 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 
 basic_auth = BasicAuth(app)
 
-# def startCamera():
-#     os.system("mkdir /tmp/stream")
-#     os.system("raspistill --nopreview -vf -hf -bm -w 640 -h 480 -q 8 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &")
-#
-
 def startStream():
-    os.system('export LD_LIBRARY_PATH')
+    os.system('export LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental')
     os.system('./var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so" -vf -hf')
+
+
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
