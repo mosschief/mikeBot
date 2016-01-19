@@ -4,7 +4,6 @@
     <list default="true" id="0aeb662b-abaa-47f6-addf-f731ede9504f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/styles.css" afterPath="$PROJECT_DIR$/static/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/drive.html" afterPath="$PROJECT_DIR$/templates/drive.html" />
     </list>
     <ignored path="mikeBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +54,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15982242">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.19977802">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -412,12 +411,6 @@
       <option name="number" value="Default" />
       <updated>1448672712415</updated>
     </task>
-    <task id="LOCAL-00077" summary="change to experiemental&#10;">
-      <created>1453169815188</created>
-      <option name="number" value="00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1453169815188</updated>
-    </task>
     <task id="LOCAL-00078" summary="change to experiemental&#10;">
       <created>1453169925578</created>
       <option name="number" value="00078" />
@@ -706,7 +699,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453238305071</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="change css">
+      <created>1453238658397</created>
+      <option name="number" value="00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1453238658397</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1261,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15982242">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19977802">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
