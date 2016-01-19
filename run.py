@@ -24,11 +24,8 @@ basic_auth = BasicAuth(app)
 #
 
 def startStream():
-    os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental/')
     os.system('export LD_LIBRARY_PATH')
-    p = os.system('ls')
-    print p
-    os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so" -vf -hf')
+    os.system('./var/www/mjpg-streamer/mjpg-streamer-experimental/mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so" -vf -hf')
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
