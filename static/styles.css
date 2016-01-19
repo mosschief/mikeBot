@@ -45,8 +45,10 @@
     width: 640px;
     height: 480px;
     align-content: center;
-    border-style: inset;
+    border-style: outset;
+    border-radius: 5px;
     border-color: black;
+    border-width: 5px;
 }
 
 
