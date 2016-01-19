@@ -20,7 +20,7 @@ basic_auth = BasicAuth(app)
 
 def startStream():
     os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    os.system('export LD_LIBRARY_PATH=.')
+    os.system('export LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental')
     os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -fps 15 -vf -hf"')
 
 
