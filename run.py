@@ -4,11 +4,11 @@ from flask import session as motorSwitch
 from flask.ext.basicauth import BasicAuth
 from datetime import timedelta
 from flask import make_response, request, current_app
-from functools import update_wrapper
 import motor
 import os
 from thread import start_new_thread
 from flask.ext.cors import CORS
+import subprocess
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -20,9 +20,12 @@ basic_auth = BasicAuth(app)
 
 def startStream():
 
-    os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    os.system('export LD_LIBRARY_PATH=/var/www/mjpg-streamer/mjpg-streamer-experimental')
-    os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -fps 15 -vf -hf"')
+    subprocess.call('export LD_LIBRARY_PATH=.', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
+    subprocess.call('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
+    #
+    # os.chdir('/var/www/mjpg-streamer/mjpg-streamer-experimental')
+    # os.system('export LD_LIBRARY_PATH=.')
+    # os.system('./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"')
 
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
