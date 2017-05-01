@@ -22,7 +22,7 @@ basic_auth = BasicAuth(app)
 def startStream():
 
     subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
-
+# add audio stream subprocess
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
@@ -30,16 +30,12 @@ def front():
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
     myIP = requests.get('https://api.ipify.org').text
-    myIP += ':8080/?action=stream'
-
-    myIP = 'http://' + myIP
-
-
-    return render_template("drive.html", streamAddress=myIP)
+    audio = 'http://' + myIP + ':1234'
+    video = 'http://' + myIP + ':8080/?action=stream'
+    return render_template("drive.html", videoStreamAddress=video, audioStreamAddress=audio)
 
 @app.route('/drive/', methods=['POST', 'GET'])
 def drive():
-
     if request.method == 'POST':
         global speedCurrent
         if request.form["right"] and request.form["left"]:
@@ -48,33 +44,25 @@ def drive():
         motorSwitch['speed'] = request.form["speed"]
         print("motor switch right: " + str(motorSwitch['right']))
         print("motor switch left: " + str(motorSwitch['left']))
-
-
         if motorSwitch['right'] == 1:
-            motor.rightForward()
+            myMotor.rightForward()
         if motorSwitch['left'] == 1:
-            motor.leftForward()
+            myMotor.leftForward()
         if motorSwitch['right'] == 0:
-            motor.rightStop()
+            myMotor.rightStop()
         if motorSwitch['left'] == 0:
-            motor.leftStop()
+            myMotor.leftStop()
         if motorSwitch['right'] == -1:
-            motor.rightBackward()
+            myMotor.rightBackward()
         if motorSwitch['left'] == -1:
-            motor.leftBackward()
+            myMotor.leftBackward()
         if motorSwitch['speed'] == 'up':
+            tmpMessage = myMotor.speedUp()
+            print tmpMessage
 
-            tmpMessage = motor.speedUp(speedCurrent)
-            if type(tmpMessage) == 'int':
-                speedCurrent = tmpMessage
-            else:
-                print tmpMessage
         if motorSwitch['speed'] == 'down':
-            tmpMessage = speedCurrent = motor.speedDown(speedCurrent)
-            if type(tmpMessage) == 'int':
-              speedCurrent = tmpMessage
-            else:
-              print tmpMessage
+            tmpMessage = myMotor.speedDown()
+            print tmpMessage
 
         return "Ok", 200
 
@@ -83,6 +71,7 @@ def drive():
 if __name__ == '__main__':
     global speedCurrent
     speedCurrent = 150
+    myMotor = motor.Motor()
 
     # context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
     # context.load_cert_chain('mikeBot.crt', 'mikeBot.key')
@@ -90,14 +79,11 @@ if __name__ == '__main__':
     # add ssl_context = context to get https on flask server
     app.debug = False
     try:
-
         start_new_thread(startStream, ())
         app.run(host='0.0.0.0', port=5000, threaded=True)
 
     finally:
-
         print("System shutting down")
-        motor.rightStop()
-        motor.leftStop()
+
 
 

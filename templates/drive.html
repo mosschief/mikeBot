@@ -13,8 +13,10 @@
 <div class="se-pre-con">Loading</div>
 <h1>mikeBot 0.1</h1>
 <div id="stream">
-     <img id="streamWindow" src= {{ streamAddress }}/>
+     <img id="streamWindow" src= {{ videoStreamAddress }}/>
 </div>
+<audio src={{ audioStreamAddress }} autoplay="True"/>
+
 <div id="buttons">
     <div class="button" id="speedDown">
         Q
@@ -61,7 +63,6 @@
             83: ['#down', 'red', 'black', [-1, -1], [0, 0]],   // S key
             69: ['#speedUp','red', 'black','up', null  ], // E key
             81: ['#speedDown','red', 'black','down', null] // Q key
-
         };
 
         $('body').on('keydown keyup', function( e ) {
@@ -71,8 +72,6 @@
             var keyArr = keyAction[key];
 
             if (typeof keyArr != 'undefined') { // Test keyArr to prevent errors
-
-
                 var propObj = {};
                 var motorObj = {"speed":null, 'left':null, 'right':null};
                 propObj['outline-color'] = keyAction[key][io];// Object to store property + value for jQuery methods
@@ -96,7 +95,7 @@
 
                     console.log(motorObj);
                     console.log("drive");
-                    // Added data to object for right motor movement
+                    // Added data to objecsrc="script.js"t for right motor movement
                     if(io == 1){
                         isOn = 1; // Change variable to indicate key is being pressed
                         keyCheck = key; // Variable stores which key is pressed
