@@ -6,10 +6,11 @@ class Motor(object):
     def __init__(self):
         self.speed = 150
         mh = Adafruit_MotorHAT(addr=0x60)
+        self.lookCurrent = 0
 
-        self.motor1 = mh.getMotor(1) # left drive
-        self.motor2 = mh.getMotor(2) # right drive
-        self.motor3 = mh.getStepper(100,2) # stepper up/down
+        self.motor1 = mh.getMotor(3)    # left drive
+        self.motor2 = mh.getMotor(4)    # right drive
+        self.motor3 = mh.getStepper(100, 1)   # stepper up/down
         self.motor1.setSpeed(150)
         self.motor2.setSpeed(150)
         self.motor3.setSpeed(30)
@@ -55,11 +56,22 @@ class Motor(object):
             return "Speed already min"
 
     def lookUp(self):
-        self.motor3.step(2, Adafruit_MotorHAT.FORWARD, Adafruit_MotorHAT.SINGLE)
+        if self.lookCurrent < 7:
+            self.lookCurrent += 1
+            self.motor3.step(2, Adafruit_MotorHAT.BACKWARD, Adafruit_MotorHAT.SINGLE)
 
     def lookDown(self):
-        self.motor3.step(2, Adafruit_MotorHAT.BACKWARD, Adafruit_MotorHAT.SINGLE)
+        if self.lookCurrent > -5:
+            self.lookCurrent -= 1
+            self.motor3.step(2, Adafruit_MotorHAT.FORWARD, Adafruit_MotorHAT.SINGLE)
 
+    def shutDown(self):
+        while self.lookCurrent < 0:
+            self.lookUp()
+            self.lookCurrent +=1
+        while self.lookCurrent > 0:
+            self.lookDown()
+            self.lookCurrent -=1
 
 
 

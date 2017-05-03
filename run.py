@@ -21,7 +21,7 @@ basic_auth = BasicAuth(app)
 
 def startStream():
 
-    subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/var/www/mjpg-streamer/mjpg-streamer-experimental')
+    subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/home/pi/mjpg-streamer/mjpg-streamer-experimental')
 # add audio stream subprocess
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
@@ -37,13 +37,11 @@ def front():
 @app.route('/drive/', methods=['POST', 'GET'])
 def drive():
     if request.method == 'POST':
-        global speedCurrent
+        global lookCurrent
         if request.form["right"] and request.form["left"]:
             motorSwitch['right'] = int(request.form["right"])
             motorSwitch['left'] = int(request.form["left"])
         motorSwitch['speed'] = request.form["speed"]
-        print("motor switch right: " + str(motorSwitch['right']))
-        print("motor switch left: " + str(motorSwitch['left']))
         if motorSwitch['right'] == 1:
             myMotor.rightForward()
         if motorSwitch['left'] == 1:
@@ -57,19 +55,16 @@ def drive():
         if motorSwitch['left'] == -1:
             myMotor.leftBackward()
         if motorSwitch['speed'] == 'up':
-            tmpMessage = myMotor.speedUp()
-            print tmpMessage
-
+                myMotor.lookUp()
         if motorSwitch['speed'] == 'down':
-            tmpMessage = myMotor.speedDown()
-            print tmpMessage
-
+                myMotor.lookDown()
         return "Ok", 200
 
     return redirect(url_for('front'))
 
 if __name__ == '__main__':
-    global speedCurrent
+    global lookCurrent
+    lookCurrent = 0
     speedCurrent = 150
     myMotor = motor.Motor()
 
@@ -83,6 +78,7 @@ if __name__ == '__main__':
         app.run(host='0.0.0.0', port=5000, threaded=True)
 
     finally:
+        myMotor.shutDown()
         print("System shutting down")
 
 
