@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aeb662b-abaa-47f6-addf-f731ede9504f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/mikeBot.iml" afterPath="$PROJECT_DIR$/.idea/mikeBot.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/motor.py" afterPath="$PROJECT_DIR$/motor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/drive.html" afterPath="$PROJECT_DIR$/templates/drive.html" />
     </list>
     <ignored path="mikeBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +60,7 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="421">
               <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
               <folding>
                 <element signature="e#21#130#0" expanded="true" />
@@ -489,13 +484,6 @@
       <option name="presentableId" value="Default" />
       <updated>1448672712415</updated>
     </task>
-    <task id="LOCAL-00086" summary="change to experiemental&#10;">
-      <created>1453170891260</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1453170891260</updated>
-    </task>
     <task id="LOCAL-00087" summary="change to experiemental&#10;">
       <created>1453171083437</created>
       <option name="number" value="00087" />
@@ -832,7 +820,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493674524125</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="change motor module to class">
+      <created>1493836567162</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1493836567163</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1335,7 +1330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="421">
           <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
           <folding>
             <element signature="e#21#130#0" expanded="true" />
