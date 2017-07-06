@@ -15,30 +15,28 @@ class Motor(object):
         self.motor2.setSpeed(150)
         self.motor3.setSpeed(30)
 
-
-
     def leftForward(self):
-        self.motor1.run(Adafruit_MotorHAT.FORWARD)
-        return
-
-    def rightForward(self):
         self.motor2.run(Adafruit_MotorHAT.FORWARD)
         return
 
-    def leftBackward(self):
-        self.motor1.run(Adafruit_MotorHAT.BACKWARD)
+    def rightForward(self):
+        self.motor1.run(Adafruit_MotorHAT.FORWARD)
         return
 
-    def rightBackward(self):
+    def leftBackward(self):
         self.motor2.run(Adafruit_MotorHAT.BACKWARD)
         return
 
+    def rightBackward(self):
+        self.motor1.run(Adafruit_MotorHAT.BACKWARD)
+        return
+
     def leftStop(self):
-        self.motor1.run(Adafruit_MotorHAT.RELEASE)
+        self.motor2.run(Adafruit_MotorHAT.RELEASE)
         return
 
     def rightStop(self):
-        self.motor2.run(Adafruit_MotorHAT.RELEASE)
+        self.motor1.run(Adafruit_MotorHAT.RELEASE)
         return
 
     def speedUp(self):

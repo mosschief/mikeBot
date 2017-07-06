@@ -23,6 +23,9 @@ def startStream():
 
     subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/home/pi/mjpg-streamer/mjpg-streamer-experimental')
 # add audio stream subprocess
+def startAudio():
+    subprocess.call('sudo darkice', shell=True, cwd='/home/pi/mjpg-streamer/mjpg-streamer-experimental')
+
 @app.route('/', methods=['GET','POST'])
 @basic_auth.required
 def front():
@@ -30,7 +33,7 @@ def front():
     motorSwitch["right"] = 0
     motorSwitch["left"] = 0
     myIP = requests.get('https://api.ipify.org').text
-    audio = 'http://' + myIP + ':1234'
+    audio = 'http://' + myIP + ':8000/live96'
     video = 'http://' + myIP + ':8080/?action=stream'
     return render_template("drive.html", videoStreamAddress=video, audioStreamAddress=audio)
 
@@ -75,6 +78,7 @@ if __name__ == '__main__':
     app.debug = False
     try:
         start_new_thread(startStream, ())
+        start_new_thread(startAudio, ())
         app.run(host='0.0.0.0', port=5000, threaded=True)
 
     finally:
