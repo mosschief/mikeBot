@@ -19,7 +19,7 @@ app.config['BASIC_AUTH_PASSWORD'] = 'test'
 
 basic_auth = BasicAuth(app)
 
-def startStream():
+def startVideo():
 
     subprocess.call('export LD_LIBRARY_PATH=. ; ./mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 640 -y 480 -fps 15 -vf -hf"', shell=True, cwd='/home/pi/mjpg-streamer/mjpg-streamer-experimental')
 # add audio stream subprocess
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     # add ssl_context = context to get https on flask server
     app.debug = False
     try:
-        start_new_thread(startStream, ())
+        start_new_thread(startVideo, ())
         start_new_thread(startAudio, ())
         app.run(host='0.0.0.0', port=5000, threaded=True)
 

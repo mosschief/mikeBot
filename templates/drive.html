@@ -90,7 +90,6 @@
 
                 else if((io == 2 && keyCheck == key) || !isOn){  //prevents two keys from being pressed, does not allow keyup to execute if it is not the same key as the last keydown
 
-
                     motorObj["left"] = keyAction[key][io+2][0]// Added data to object for left motor movement
                     motorObj["right"] = keyAction[key][io+2][1]
 
@@ -112,7 +111,6 @@
                         data: motorObj
                     });
                 }
-
             }
         });
 
